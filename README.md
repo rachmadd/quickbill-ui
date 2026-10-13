@@ -13,7 +13,7 @@ npm install quickbill-ui
 
 See Storybook for more documentation and guidelines.
 
-**[Preview Storybook](https://6ace544728e8e596ac5d731e-huvhvmzqvp.chromatic.com)**
+**[Preview Storybook](https://main--6ace544728e8e596ac5d731e.chromatic.com)**
 
 To run:
 

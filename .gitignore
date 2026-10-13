@@ -41,3 +41,6 @@ bundle-stats.html
 .npmrc
 # local Claude Code settings
 .claude/settings.local.json
+
+# local secrets
+chromatic.sh

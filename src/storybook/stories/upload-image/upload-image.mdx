@@ -1,0 +1,40 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as UploadImageStories from './upload-image.stories.tsx';
+
+<Meta of={UploadImageStories} />
+
+# UploadImage
+
+A component for uploading single images with preview capabilities.
+
+### Usage
+
+```tsx
+import { useState } from 'react'
+import { UploadImage } from 'quickbill-ui'
+
+export const MyComponent = () => {
+  const [image, setImage] = useState<File | string | null>(null)
+
+  return (
+    <UploadImage
+      value={image}
+      onChange={setImage}
+      label="Company Logo"
+      subLabel="JPG or PNG max 10MB"
+    />
+  )
+}
+```
+
+***
+
+#
+### Example
+<Primary of={UploadImageStories}/>
+
+### Props
+<Controls of={UploadImageStories.Default} />
+
+<Stories of={UploadImageStories} />

@@ -1,0 +1,19 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+import * as TooltipStories from './tooltip.stories.tsx';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+Reference: [https://ui.shadcn.com/docs/components/tooltip](https://ui.shadcn.com/docs/components/tooltip).
+
+***
+
+### Example
+<Primary of={TooltipStories} close={true} />
+
+### Props
+<Controls of={TooltipStories.Primary} />
+
+### All Variants
+<Stories of={TooltipStories} />

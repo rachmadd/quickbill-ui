@@ -1,0 +1,19 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+import * as BadgeStories from './badge.stories.tsx';
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+Reference: [https://ui.shadcn.com/docs/components/badge](https://ui.shadcn.com/docs/components/badge).
+
+***
+
+### Example
+<Primary of={BadgeStories} close={true} />
+
+### Props
+<Controls of={BadgeStories.Default} />
+
+### All Variants
+<Stories of={BadgeStories} />

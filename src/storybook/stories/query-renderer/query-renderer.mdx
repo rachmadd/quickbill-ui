@@ -1,0 +1,19 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as QueryRendererStories from './query-renderer.stories.tsx';
+
+<Meta of={QueryRendererStories} />
+
+# Query Renderer
+
+Component to render data from API
+
+#
+### Example
+<Primary of={QueryRendererStories} close={true} />
+
+
+### Props
+<Controls of={QueryRendererStories.Primary} />
+
+<Stories of={QueryRendererStories} />

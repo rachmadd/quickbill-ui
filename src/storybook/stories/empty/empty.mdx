@@ -1,0 +1,23 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as EmptyStories from './empty.stories.tsx';
+
+<Meta of={EmptyStories} />
+
+# Empty
+
+Use the Empty component to display an empty state.
+
+Reference: [https://ui.shadcn.com/docs/components/empty](https://ui.shadcn.com/docs/components/empty).
+
+***
+
+#
+### Example
+<Primary of={EmptyStories} close={true} />
+
+
+### Props
+<Controls of={EmptyStories.Default} />
+
+<Stories of={EmptyStories} />

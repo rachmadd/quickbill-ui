@@ -1,0 +1,271 @@
+:root {
+  /*
+  PRIMITIVE COLOR
+  */
+
+  /* Primary */
+  --qb-blue-10: #f5f8ff;
+  --qb-blue-15: #eaf0ff;
+  --qb-blue-20: #d8e4ff;
+  --qb-blue-30: #b1caff;
+  --qb-blue-40: #8aafff;
+  --qb-blue-50: #6395ff;
+  --qb-blue-60: #3c7aff;
+  --qb-blue-70: #2f65e2;
+  --qb-blue-80: #0038b9;
+  --qb-blue-90: #022984;
+  --qb-blue-100: #0c1833;
+
+  /* Secondary */
+  --qb-daisy-10: #fffbe3;
+  --qb-daisy-20: #fff7c5;
+  --qb-daisy-30: #fff3a5;
+  --qb-daisy-50: #ffe332;
+  --qb-daisy-70: #d7bb0a;
+  --qb-daisy-80: #a68f00;
+
+  /* MIST (Neutral) */
+  --qb-mist-0: #ffffff;
+  --qb-mist-10: #f9fafb;
+  --qb-mist-20: #f6f5f4;
+  --qb-mist-30: #e3e2df;
+  --qb-mist-40: #a6a6a6;
+  --qb-mist-50: #909090;
+  --qb-mist-60: #737373;
+  --qb-mist-70: #43423c;
+  --qb-mist-80: #302f2d;
+  --qb-mist-90: #22211f;
+  --qb-mist-100: #1d1d1d;
+
+  /* SUCCESS */
+  --qb-success-10: #d6eedd;
+  --qb-success-20: #aedcba;
+  --qb-success-main: #34a853;
+  --qb-success-dark: #154321;
+
+  /* INFO */
+  --qb-info-10: #d9e7fd;
+  --qb-info-20: #b3cefb;
+  --qb-info-main: #4285f4;
+  --qb-info-dark: #1a3562;
+
+  /* WARNING */
+  --qb-warning-10: #ffedcc;
+  --qb-warning-20: #ffdb99;
+  --qb-warning-main: #ffa500;
+  --qb-warning-dark: #664200;
+
+  /* NEGATIVE */
+  --qb-negative-10: #fed7d3;
+  --qb-negative-20: #fdafa8;
+  --qb-negative-main: #f93625;
+  --qb-negative-dark: #64160f;
+
+  /*
+  @shadcn/ui Tokens
+  */
+  --qb-background: var(--qb-mist-0);
+  --qb-foreground: var(--qb-mist-80);
+  --qb-primary: var(--qb-blue-70);
+  --qb-primary-foreground: var(--qb-mist-0);
+  --qb-secondary: var(--qb-mist-40);
+  --qb-secondary-foreground: var(--qb-mist-0);
+  --qb-muted: var(--qb-mist-20);
+  --qb-muted-foreground: var(--qb-mist-50);
+  --qb-accent: var(--qb-mist-20);
+  --qb-accent-foreground: var(--qb-mist-80);
+  --qb-destructive: var(--qb-negative-main);
+
+  --qb-radius: 0.25rem; /* 4 px */
+  --qb-border: var(--qb-mist-30);
+  --ring: var(--qb-blue-50);
+
+  --qb-input: var(--qb-mist-30);
+
+  /*
+  CUSTOM TOKEN
+  */
+  --elevation-soft: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+  --elevation-light: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --elevation: 0 2px 12px 0 rgba(26, 27, 27, 0.08);
+  --elevation-xl: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  --shadow-border: 0 -1px 0 0 rgba(0, 0, 0, 0.08) inset;
+  --shadow-table-action: -2px 0 2px 0 rgba(0, 0, 0, 0.08);
+  --switch-drop-shadow: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12))
+    drop-shadow(0 1px 1px rgba(0, 0, 0, 0.14)) drop-shadow(0 2px 1px rgba(0, 0, 0, 0.2));
+
+  /*
+      COMPPONENT & COMPONENT VARIANT MAPPINGS
+      format:
+      --color-<component_name>-[variant]-[state]-<props>
+      e.g: --color-btn-outline-disabled-foreground
+    */
+
+  /* BUTTON */
+
+  /* default btn */
+  --btn-bg: var(--qb-primary);
+  --btn-foreground: var(--qb-primary-foreground);
+  --btn-hover-bg: var(--qb-primary);
+  --btn-disabled-bg: var(--qb-mist-20);
+  --btn-disabled-foreground: var(--qb-mist-50);
+  --btn-ring: var(--ring);
+  --btn-focus-border: var(--ring);
+  --btn-focus-ring: var(--ring);
+  --btn-aria_invalid-ring: var(--qb-destructive);
+  --btn-aria_invalid-border: var(--qb-destructive);
+
+  /* destructive btn */
+  --btn-destructive-bg: var(--qb-destructive);
+  --btn-destructive-foreground: var(--qb-mist-0);
+  --btn-destructive-hover-bg: var(--qb-destructive);
+  --btn-destructive-focus-ring: var(--qb-destructive);
+
+  /* outline btn */
+  --btn-outline-ring: var(--qb-blue-30);
+  --btn-outline-foreground: var(--qb-primary);
+  --btn-outline-bg: var(--qb-mist-0);
+  --btn-outline-hover-bg: var(--qb-blue-20);
+  --btn-outline-hover-foreground: var(--qb-primary);
+  --btn-outline-disabled-ring: var(--qb-mist-30);
+  --btn-outline-disabled-foreground: var(--qb-mist-50);
+
+  /* secondary btn */
+  --btn-secondary-bg: var(--qb-secondary);
+  --btn-secondary-foreground: var(--qb-secondary-foreground);
+  --btn-secondary-hover-bg: var(--qb-secondary);
+
+  /* secondary outline btn */
+  --btn-secondary_outline-ring: var(--qb-secondary);
+  --btn-secondary_outline-foreground: var(--qb-mist-60);
+  --btn-secondary_outline-bg: var(--qb-mist-0);
+  --btn-secondary_outline-hover-bg: var(--qb-secondary);
+  --btn-secondary_outline-disabled-ring: var(--qb-mist-30);
+  --btn-secondary_outline-disabled-foreground: var(--qb-mist-50);
+
+  /* ghost btn */
+  --btn-ghost-bg: transparent;
+  --btn-ghost-hover-bg: var(--qb-mist-20);
+  --btn-ghost-disabled-foreground: var(--qb-mist-50);
+
+  /* link btn */
+  --btn-link-foreground: var(--qb-primary);
+
+  /* END BUTTON */
+
+  /* INPUT */
+
+  /* DEFAULT & GLOBAL */
+  --inp-border: var(--qb-input);
+  --inp-focus-border: var(--ring);
+  --inp-focus-ring: var(--ring);
+  --inp-bg: var(--qb-mist-0);
+  --inp-placeholder-foreground: var(--qb-mist-40);
+  --inp-selection-bg: var(--qb-primary);
+  --inp-selection-foreground: var(--qb-primary-foreground);
+  --inp-disabled-bg: var(--qb-mist-10);
+  --inp-disabled-foreground: var(--qb-mist-50);
+  --inp-disabled-placeholder-foreground: var(--qb-mist-40);
+  --inp-file-foreground: var(--qb-foreground);
+  --inp-file-bg: transparent;
+  --inp-aria_invalid-ring: var(--qb-destructive);
+  --inp-aria_invalid-border: var(--qb-destructive);
+
+  /* GHOST */
+  --inp-ghost-bg: transparent;
+
+  /* FILLED */
+  --inp-filled-bg: var(--qb-mist-10);
+  --inp-filled-focus-ring: var(--qb-mist-10);
+  --inp-filled-border: transparent;
+
+  /* INPUT GROUP */
+
+  /* DEFAULT */
+  --input_group-ring: var(--qb-input);
+  --input_group-focus_visible-ring: var(--ring);
+  --input_group-bg: var(--qb-mist-0);
+
+  /* GHOST */
+  --input_group-ghost-border: transparent;
+  --input_group-ghost-bg: transparent;
+
+  /* FILLED */
+  --input_group-filled-bg: var(--qb-mist-10);
+  --input_group-filled-focus-ring: var(--qb-mist-10);
+  --input_group-filled-border: transparent;
+}
+
+.quicbill-ui {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+/* SCROLLBAR */
+.quickbill-ui *::-webkit-scrollbar {
+  width: 6px;
+}
+.quickbill-ui *::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.quickbill-ui *::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.quickbill-ui *::-webkit-scrollbar-thumb {
+  background: var(--qb-mist-30);
+  border-radius: 10px;
+}
+.quickbill-ui *::-webkit-scrollbar-thumb:hover {
+  background: var(--qb-mist-40);
+}
+
+.quickbill-ui-ripple-element {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation ease-out;
+  background-color: currentColor;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #333 !important; /* Your text color */
+  transition: background-color 5000s ease-in-out 0s;
+}

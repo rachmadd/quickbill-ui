@@ -1,0 +1,23 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as BreadcrumbStories from './breadcrumb.stories.tsx';
+ 
+<Meta of={BreadcrumbStories} />
+ 
+# Breadcrumb
+ 
+Breadcrumb navigation component 
+
+Reference: [https://ui.shadcn.com/docs/components/breadcrumb](https://ui.shadcn.com/docs/components/breadcrumb).
+
+***
+
+#
+### Example
+<Primary of={BreadcrumbStories} close={true} />
+
+### Props
+<Controls of={BreadcrumbStories.Primary} />
+
+<Stories of={BreadcrumbStories} />
+

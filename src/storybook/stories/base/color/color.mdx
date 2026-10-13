@@ -1,0 +1,43 @@
+{/* src/stories/Colors.mdx */}
+
+import { Meta } from '@storybook/addon-docs/blocks'
+import { ColorPalette, primary, secondary, mist, negative, info, success, warning } from './color-swatch';
+
+<Meta title="Colors" />
+
+# Color Palette
+
+Our color palette forms the foundation of our visual identity. These colors are used consistently across all components and communications to ensure a cohesive user experience.
+You can use these colors with `tailwind` class ( e.g `bg-brand-10` or `text-qb-success-main` )
+
+## Brand Colors
+
+These are the primary colors that define our brand. They should be used for key actions, highlights, and branding elements.
+
+<ColorPalette colors={primary} />
+
+## Neutral Colors
+
+Neutrals provide balance and form the backbone of our interface. They are used for text, backgrounds, borders, and disabled states.
+<ColorPalette colors={mist} />
+
+## Secondary
+Secondary color used for Accent or pair of Primary color 
+<ColorPalette colors={secondary} />
+
+## Info
+Color for info related content
+<ColorPalette colors={info} />
+
+## Success
+Color for success related content
+<ColorPalette colors={success} />
+
+## Warning
+Color for warning related content
+<ColorPalette colors={warning} />
+
+## Negative
+Color for danger related content, error, negative
+<ColorPalette colors={negative} />
+

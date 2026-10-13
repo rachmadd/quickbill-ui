@@ -1,0 +1,40 @@
+import { Meta, Primary, Controls, Stories } from '@storybook/addon-docs/blocks';
+import * as DataEntryStories from './data-entry.stories';
+
+<Meta of={DataEntryStories} />
+
+# DataEntry
+
+A flexible component for displaying label-value pairs. Supports single values, multiple values (arrays), title-only mode, custom rendering, and both vertical/horizontal orientations.
+
+## Example
+<Primary of={DataEntryStories} />
+
+## Props
+<Controls of={DataEntryStories.Primary} />
+
+## Usage Patterns
+
+### Title Only (No Placeholder)
+Use `showPlaceholder={false}` to render only the label without the `"-"` fallback — ideal for section headings.
+
+```tsx
+<DataEntry label="Informasi Utama" showPlaceholder={false} />
+```
+
+### Multiple Values (Array)
+Pass an array to `value` to render multiple lines under one label — useful for contact details, bank info, etc.
+
+```tsx
+<DataEntry label="Contact Person" value={['John Doe', '081234567890', 'john@example.com']} />
+```
+
+### Single Value (Default)
+The classic usage remains unchanged.
+
+```tsx
+<DataEntry label="Email" value="johndoe@example.com" />
+```
+
+## All Stories
+<Stories of={DataEntryStories} />

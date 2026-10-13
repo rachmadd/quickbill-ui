@@ -1,0 +1,152 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks'
+import { version } from '../../../package.json'
+
+<Meta title="Introduction" />
+
+<div>
+# QuickBill UI Library
+
+<div
+style={{
+fontSize: '14px',
+fontWeight: 'bold',
+color: '#666',
+padding: '1px 20px',
+borderRadius: '4px',
+backgroundColor: '#f0f0f0',
+}}>
+quickbill-ui <br />
+v{version}
+</div>
+
+Welcome to the QuickBill UI Library. A collection of reusable React components built on shadcn/ui and Base UI. Our goal is to maintain a consistent, accessible, and high-quality user experience.
+
+## Core Principles & Technology
+
+This is not a traditional component library published as an opaque package. Instead, we've adopted the philosophy of shadcn/ui, treating our UI elements as a collection of reusable code that you can easily understand and extend. Our components are built upon a solid foundation of industry-standard, accessible primitives.
+
+- **shadcn/ui**: We use shadcn/ui as a base for our component architecture and API. We wrap and style these components to match our brand.
+  - [shadcn/ui Documentation](https://ui.shadcn.com/docs/components)
+- **Radix UI**: Most of our components are built on top of Radix UI primitives. These provide the core functionality and accessibility features (like keyboard navigation, focus management, and ARIA attributes) out of the box.
+  - [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/overview/introduction)
+- **Tailwind CSS**: All styling is handled via Tailwind CSS utility classes. This allows for rapid development and easy maintenance, keeping our styles consistent with our design tokens.
+  - [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation/using-vite)
+
+## Contributing & Adding Components
+
+To maintain consistency, please follow this process when adding a new component, its stories, and its documentation.
+
+#### **1. Folder Structure**
+
+Every component should have its code in the `src/components/ui` directory and its corresponding stories and docs inside the stories directory.
+
+```
+quickbill-ui-library/
+├── src/
+│ └── components/
+│     └── ui/
+│        └── button.tsx // Component source code
+│ └── hooks/
+│      └── use-debounce.tsx // Hooks source code
+├── stories/
+│  └── button/
+│        ├── Button.stories.tsx // Component stories
+│        └── Button.mdx // Component documentation
+└── ...
+```
+
+#### **2. Create Component**
+Add new Component by install them from `@shadcn/ui` (if exists). It will automatically add new file under `src/components/ui/`. Open that file and enjoy customizing style and adding new props
+<Source
+language="tsx"
+dark
+code={`
+   bunx --bun shadcn@latest add accordion
+`}
+/>
+If you are creating new component and <u>it doesn't exists in</u> `@shadcn/ui`. Please store your new component under `src/components/core`
+
+
+#### **3. Create the Story File `(\*.stories.tsx)`**
+
+The story file is for showcasing all the different states and variations of your component. It uses TypeScript to provide strong types for your component's props. Below is the template based on our Button component.
+
+<Source
+language="tsx"
+dark
+code={`
+   import type { Meta, StoryObj } from '@storybook/react-vite';
+   import { Button, buttonSizes, buttonVariants } from '../../components/ui/button';
+
+   // The 'meta' object defines the component's title in the sidebar and configures argTypes
+   const meta: Meta<typeof Button> = {
+      title: 'Components/Button', // How the component is named in the Storybook sidebar
+      component: Button,
+      argTypes: { // This configures the controls for each prop
+         size: {
+            control: { type: 'radio' },
+            options: ['sm', 'md', 'lg'],
+         },
+         disabled: {
+            control: { type: 'boolean' },
+         },
+         variant: {
+            control: { type: 'select' },
+            options: ['primary', 'secondary', 'outlined', 'ghost', 'link'],
+            description: 'Button variants',
+         },
+      },
+   };
+
+   export default meta;
+   type Story = StoryObj<typeof Button>;
+
+   // Each export is a new story (a specific state of the component)
+   export const Primary: Story = {
+      args: { // 'args' defines the props for this specific story
+         children: 'Submit',
+      },
+   };
+
+   export const Secondary: Story = {
+      args: {
+         children: 'Cancel',
+         variant: 'secondary',
+      },
+   };
+`}
+/>
+
+#### **4. Create the Documentation File `(*.mdx)`**
+
+The MDX file provides detailed documentation, usage guidelines, and showcases your stories in a clean format. Use the template below, which is based on our Button documentation.
+
+<Source
+language="md"
+dark
+code={`
+   import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs';
+   import * as ButtonStories from './Button.stories';
+
+   // Links this MDX file to the stories file
+   <Meta of={ButtonStories} />
+
+   Button
+   A brief, one-line description of the component (e.g., "Clickable Element").
+   Reference: https://ui.shadcn.com/docs/components/button
+
+   <hr />
+
+   Example
+   This section should display the primary example of the component.
+   <Primary />
+
+   Props
+   This renders the interactive controls table for the primary story.
+   <Controls of={ButtonStories.Primary} />
+
+   All Variations
+   This block automatically renders all stories from your stories file.
+   <Stories />
+`} />
+</div>

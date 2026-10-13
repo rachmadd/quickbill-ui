@@ -1,0 +1,23 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as TableStories from './data-table.stories.tsx';
+
+<Meta of={TableStories} />
+
+# Data Table
+
+Display tabular data, wrapper from @tanstack/react-table.
+
+Reference: [https://ui.shadcn.com/docs/components/data-table](https://ui.shadcn.com/docs/components/data-table).
+
+***
+
+#
+### Example
+<Primary of={TableStories} close={true} />
+
+
+### Props
+<Controls of={TableStories.Default} />
+
+<Stories of={TableStories} />

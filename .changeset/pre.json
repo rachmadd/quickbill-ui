@@ -1,0 +1,30 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "quickbill-ui": "2.17.2"
+  },
+  "changesets": [
+    "afraid-planes-repeat",
+    "bright-crabs-sneeze",
+    "brown-bananas-appear",
+    "bumpy-cars-enter",
+    "cozy-worlds-win",
+    "dirty-worms-love",
+    "enhance-data-entry-component",
+    "every-windows-share",
+    "fair-views-wave",
+    "famous-bananas-leave",
+    "fast-parrots-behave",
+    "few-readers-clean",
+    "fiery-pans-tickle",
+    "huge-eggs-sniff",
+    "ninety-shrimps-lose",
+    "purple-socks-peel",
+    "rich-hands-begin",
+    "sixty-swans-create",
+    "spicy-hoops-hide",
+    "sunny-nails-throw",
+    "yummy-pears-talk"
+  ]
+}

@@ -1,0 +1,239 @@
+/**
+ * Quickbill UI Preset for Tailwind CSS v4
+ *
+ * This file maps the CSS variables from globals.css to
+ * Tailwind's theme utilities (e.g., bg-qb-blue-10).
+ */
+
+@theme inline {
+  /*
+  PRIMITIVE COLOR MAPPINGS
+  */
+  --color-qb-blue-10: var(--qb-blue-10);
+  --color-qb-blue-15: var(--qb-blue-15);
+  --color-qb-blue-20: var(--qb-blue-20);
+  --color-qb-blue-30: var(--qb-blue-30);
+  --color-qb-blue-40: var(--qb-blue-40);
+  --color-qb-blue-50: var(--qb-blue-50);
+  --color-qb-blue-60: var(--qb-blue-60);
+  --color-qb-blue-70: var(--qb-blue-70);
+  --color-qb-blue-80: var(--qb-blue-80);
+  --color-qb-blue-90: var(--qb-blue-90);
+  --color-qb-blue-100: var(--qb-blue-100);
+  --color-qb-daisy-10: var(--qb-daisy-10);
+  --color-qb-daisy-20: var(--qb-daisy-20);
+  --color-qb-daisy-30: var(--qb-daisy-30);
+  --color-qb-daisy-50: var(--qb-daisy-50);
+  --color-qb-daisy-70: var(--qb-daisy-70);
+  --color-qb-daisy-80: var(--qb-daisy-80);
+  --color-qb-mist-0: var(--qb-mist-0);
+  --color-qb-mist-10: var(--qb-mist-10);
+  --color-qb-mist-20: var(--qb-mist-20);
+  --color-qb-mist-30: var(--qb-mist-30);
+  --color-qb-mist-40: var(--qb-mist-40);
+  --color-qb-mist-50: var(--qb-mist-50);
+  --color-qb-mist-60: var(--qb-mist-60);
+  --color-qb-mist-70: var(--qb-mist-70);
+  --color-qb-mist-80: var(--qb-mist-80);
+  --color-qb-mist-90: var(--qb-mist-90);
+  --color-qb-mist-100: var(--qb-mist-100);
+  --color-qb-success-10: var(--qb-success-10);
+  --color-qb-success-20: var(--qb-success-20);
+  --color-qb-success-main: var(--qb-success-main);
+  --color-qb-success-dark: var(--qb-success-dark);
+  --color-qb-info-10: var(--qb-info-10);
+  --color-qb-info-20: var(--qb-info-20);
+  --color-qb-info-main: var(--qb-info-main);
+  --color-qb-info-dark: var(--qb-info-dark);
+  --color-qb-warning-10: var(--qb-warning-10);
+  --color-qb-warning-20: var(--qb-warning-20);
+  --color-qb-warning-main: var(--qb-warning-main);
+  --color-qb-warning-dark: var(--qb-warning-dark);
+  --color-qb-negative-10: var(--qb-negative-10);
+  --color-qb-negative-20: var(--qb-negative-20);
+  --color-qb-negative-main: var(--qb-negative-main);
+  --color-qb-negative-dark: var(--qb-negative-dark);
+
+  /*
+  SEMANTIC COLOR MAPPINGS
+  */
+  --color-qb-background: var(--qb-background);
+  --color-qb-foreground: var(--qb-foreground);
+  --color-qb-primary: var(--qb-primary);
+  --color-qb-primary-foreground: var(--qb-primary-foreground);
+  --color-qb-secondary: var(--qb-secondary);
+  --color-qb-secondary-foreground: var(--qb-secondary-foreground);
+  --color-qb-muted: var(--qb-muted);
+  --color-qb-muted-foreground: var(--qb-muted-foreground);
+  --color-qb-accent: var(--qb-accent);
+  --color-qb-accent-foreground: var(--qb-accent-foreground);
+  --color-qb-destructive: var(--qb-destructive);
+  --color-qb-border: var(--qb-border);
+  --color-qb-input: var(--qb-input);
+  --color-ring: var(--ring);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-qb-mist-90);
+
+  --color-accent: var(--color-qb-blue-15);
+  --color-accent-foreground: var(--color-qb-mist-90);
+  --color-muted-foreground: var(--color-qb-mist-40);
+
+  /*
+    COMPPONENT & COMPONENT VARIANT MAPPINGS
+    format:
+    --color-<component_name>-[variant]-[state]-<props>
+    e.g: --color-btn-outline-disabled-foreground
+  */
+
+  /* default btn */
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-foreground: var(--btn-foreground);
+  --color-btn-hover-bg: var(--btn-hover-bg);
+  --color-btn-disabled-bg: var(--btn-disabled-bg);
+  --color-btn-disabled-foreground: var(--btn-disabled-foreground);
+  --color-btn-ring: var(--btn-ring);
+  --color-btn-focus-border: var(--btn-focus-border);
+  --color-btn-focus-ring: var(--btn-focus-ring);
+  --color-btn-aria_invalid-ring: var(--btn-aria_invalid-ring);
+  --color-btn-aria_invalid-border: var(--btn-aria_invalid-border);
+
+  /* destructive btn */
+  --color-btn-destructive-bg: var(--btn-destructive-bg);
+  --color-btn-destructive-foreground: var(--btn-destructive-foreground);
+  --color-btn-destructive-hover-bg: var(--btn-destructive-hover-bg);
+  --color-btn-destructive-focus-ring: var(--btn-destructive-focus-ring);
+
+  /* outline btn */
+  --color-btn-outline-ring: var(--btn-outline-ring);
+  --color-btn-outline-foreground: var(--btn-outline-foreground);
+  --color-btn-outline-bg: var(--btn-outline-bg);
+  --color-btn-outline-hover-bg: var(--btn-outline-hover-bg);
+  --color-btn-outline-hover-foreground: var(--btn-outline-hover-foreground);
+  --color-btn-outline-disabled-ring: var(--btn-outline-disabled-ring);
+  --color-btn-outline-disabled-foreground: var(--btn-outline-disabled-foreground);
+
+  /* secondary btn */
+  --color-btn-secondary-bg: var(--btn-secondary-bg);
+  --color-btn-secondary-foreground: var(--btn-secondary-foreground);
+  --color-btn-secondary-hover-bg: var(--btn-secondary-hover-bg);
+
+  /* secondary outline btn */
+  --color-btn-secondary_outline-ring: var(--btn-secondary_outline-ring);
+  --color-btn-secondary_outline-foreground: var(--btn-secondary_outline-foreground);
+  --color-btn-secondary_outline-bg: var(--btn-secondary_outline-bg);
+  --color-btn-secondary_outline-hover-bg: var(--btn-secondary_outline-hover-bg);
+  --color-btn-secondary_outline-disabled-ring: var(--btn-secondary_outline-disabled-ring);
+  --color-btn-secondary_outline-disabled-foreground: var(
+    --btn-secondary_outline-disabled-foreground
+  );
+
+  /* ghost btn */
+  --color-btn-ghost-bg: var(--btn-ghost-bg);
+  --color-btn-ghost-hover-bg: var(--btn-ghost-hover-bg);
+  --color-btn-ghost-disabled-foreground: var(--btn-ghost-disabled-foreground);
+
+  /* link btn */
+  --color-btn-link-foreground: var(--btn-link-foreground);
+
+  /* END BUTTON */
+
+  /* INPUT */
+  /* DEFAULT & GLOBAL */
+  --color-inp-border: var(--inp-border);
+  --color-inp-focus-border: var(--inp-focus-border);
+  --color-inp-focus-ring: var(--inp-focus-ring);
+  --color-inp-bg: var(--inp-bg);
+  --color-inp-placeholder-foreground: var(--inp-placeholder-foreground);
+  --color-inp-selection-bg: var(--inp-selection-bg);
+  --color-inp-selection-foreground: var(--inp-selection-foreground);
+  --color-inp-disabled-bg: var(--inp-disabled-bg);
+  --color-inp-disabled-foreground: var(--inp-disabled-foreground);
+  --color-inp-disabled-placeholder-foreground: var(--inp-disabled-placeholder-foreground);
+  --color-inp-file-foreground: var(--inp-file-foreground);
+  --color-inp-file-bg: var(--inp-file-bg);
+  --color-inp-aria_invalid-ring: var(--inp-aria_invalid-ring);
+  --color-inp-aria_invalid-border: var(--inp-aria_invalid-border);
+
+  /* GHOST */
+  --color-inp-ghost-bg: var(--inp-ghost-bg);
+
+  /* FILLED */
+  --color-inp-filled-bg: var(--inp-filled-bg);
+  --color-inp-filled-focus-ring: var(--inp-filled-focus-ring);
+  --color-inp-filled-border: var(--inp-filled-border);
+
+  /* END INPUT */
+
+  /* INPUT GROUP */
+  --color-input_group-ring: var(--input_group-ring);
+  --color-input_group-focus_visible-ring: var(--input_group-focus_visible-ring);
+  --color-input_group-bg: var(--input_group-bg);
+
+  /* GHOST */
+  --color-input_group-ghost-border: var(--input_group-ghost-border);
+  --color-input_group-ghost-bg: var(--input_group-ghost-bg);
+
+  /* FILLED */
+  --color-input_group-filled-bg: var(--input_group-filled-bg0);
+  --color-input_group-filled-focus-ring: var(--input_group-filled-focus-ring);
+  --color-input_group-filled-border: var(--input_group-filled-border);
+
+  /*
+  BORDER RADIUS MAPPINGS
+  */
+  --radius-sm: var(--qb-radius);
+  --radius-md: calc(var(--qb-radius) + 4px);
+  --radius-lg: calc(var(--qb-radius) + 8px);
+  --radius-xl: calc(var(--qb-radius) + 12px);
+
+  /*
+  SHADOW MAPPINGS
+  */
+  --shadow-elevation-soft: var(--elevation-soft);
+  --shadow-elevation: var(--elevation);
+  --shadow-elevation-light: var(--elevation-light);
+  --shadow-elevation-xl: var(--elevation-xl);
+  --shadow-border: var(--shadow-border);
+  --shadow-table-action: var(--shadow-table-action);
+  --drop-shadow-switch: var(--switch-drop-shadow);
+
+  /*
+  ANIMATION MAPPINGS
+  */
+  --animate-shimmer: shimmer 1.4s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+  }
+  .custom-scrollbar::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Track color */
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--qb-mist-40); /* Thumb color */
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--qb-mist-50); /* Thumb color */
+  }
+}

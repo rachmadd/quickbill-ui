@@ -1,0 +1,21 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as CardStories from './card.stories';
+ 
+<Meta of={CardStories} />
+ 
+# Card
+ 
+Reference: [https://ui.shadcn.com/docs/components/card](https://ui.shadcn.com/docs/components/card).
+
+***
+
+#
+### Example
+<Primary of={CardStories} close={true} />
+
+### Props
+<Controls of={CardStories.Primary} />
+
+<Stories of={CardStories} />
+

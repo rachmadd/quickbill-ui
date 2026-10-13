@@ -1,0 +1,92 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks'
+import { version } from '../../../package.json'
+
+<Meta title="Publish & Versioning" />
+
+# Publish & Versioning Guideline
+We use **Changesets** to automate version bumping, changelog generation, and releases. Every pull request that contains a user-facing change **must** include a changeset.
+
+## **When to Add a Changeset**
+
+You should add a changeset if your changes include:
+- **User-facing changes**: New features, bug fixes, performance improvements, or any change a consumer of the package would notice.
+- **Breaking changes**: Any change that is not backward-compatible.
+- **Deprecations**: Marking a feature or component as deprecated.
+
+You do not need to add a changeset for:
+- Documentation updates (e.g., changing comments, updating a `README.md`).
+- CI/CD configuration changes.
+- Internal refactoring that has no effect on the public API.
+
+## **How to Add a Changeset**
+After you've made your changes, run the following command in your terminal:
+<Source
+language="bash"
+dark
+code={`
+   bun run changeset
+`}
+/>
+This will launch an interactive CLI that will ask you a few questions:
+(1.) Which packages did you change?
+   - Press `Space` to select the package(s) your changes affect.
+   - Press `Enter` to confirm.
+2. What is the bump type for this change?
+   - `patch`: For backward-compatible bug fixes, dependency changes, component update.
+   - `minor`: For new features / new component that are backward-compatible.
+   - `major`: For any **breaking changes** that are not backward-compatible.
+3. What is the summary of this change?
+   - Write a clear, concise summary of your change. This message will appear directly in the `CHANGELOG.md`.
+   - Use markdown if you need to, and write in the past tense (e.g., "Fixed an issue where..." or "Added a new `Button` variant.").
+
+Once you complete the prompts, a new markdown file with a unique name (e.g., `silly-dolphins-cry.md`) will be generated in the `.changeset/` directory.
+
+**IMPORTANT:** Commit this generated changeset file along with your code changes.
+<Source
+   language="bash"
+   dark
+   code={`
+      git add .
+      git commit -m "feat: add new button component and changeset"
+   `}
+/>
+
+## **Release**
+Follow these steps to manually version and publish the package.
+
+### **1. Ensure your `main` branch is up to date**.
+
+### **2. Apply the version bumps**.
+This command consumes all changeset files in the `.changeset` directory, updates the version in `package.json`, and updates the `CHANGELOG.md`. The changeset files are deleted after this step.
+<Source
+   language="bash"
+   dark
+   code={`
+      bun run version-packages
+   `}
+/>
+
+### **3. Review the changes.**
+Inspect the `package.json` and `CHANGELOG.md` to ensure the version bump and changelog entries are correct.
+
+### **4. Commit the versioning files.**
+Commit the changes made by the Changesets tool.
+<Source
+   language="bash"
+   dark
+   code={`
+      git add .
+      git commit -m "release: {{version}}"
+   `}
+/>
+
+### **5. Publish to the registry.**
+
+   Finally, run the release script. This script will build the package and then publish it to the configured registry.
+   <Source
+      language="bash"
+      dark
+      code={`
+         bun run release
+      `}
+   />

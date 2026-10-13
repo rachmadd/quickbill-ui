@@ -1,0 +1,18 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+import * as DividerStories from './divider.stories.tsx';
+
+<Meta of={DividerStories} />
+
+# Accordion
+A component gives a line between sections. Depending on the orientation
+
+***
+
+### Example
+<Primary of={DividerStories} close={true} />
+
+### Props
+<Controls of={DividerStories.Horizontal} />
+
+### All Variants
+<Stories of={DividerStories} />

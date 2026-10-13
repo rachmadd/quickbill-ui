@@ -1,0 +1,18 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+import * as AccordionStories from './collapsible.stories.tsx';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+A component that allows users to toggle the visibility of content.
+
+***
+
+### Example
+<Primary of={AccordionStories} close={true} />
+
+### Props
+<Controls of={AccordionStories.Default} />
+
+### All Variants
+<Stories of={AccordionStories} />

@@ -1,0 +1,132 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks'
+import { version } from '../../../package.json'
+
+<Meta title="Installation" />
+
+<div>
+# Installation
+
+To use this component library in your own project, follow these steps.
+
+#### **1. Install the Package**
+Install the library using your package manager.
+<Source
+  language="bash"
+  dark
+  code={`
+      # Install Quickbill UI Package
+         # BUN
+         bun add quickbill-ui
+
+         # NPM
+         npm install quickbill-ui
+  `}
+/>
+to update package
+<Source
+  language="bash"
+  dark
+  code={`
+      # BUN
+      bun update quickbill-ui
+
+      # NPM
+      npm update quickbill-ui
+  `}
+/>
+#### 2. **Configure CSS**
+Import the css file into your main CSS file
+
+#### **For Tailwind v4**
+Import the following files into your main CSS file (e.g., index.css)
+- **Note:** `preset-v4` css is theme preset so you can use our token directly in your project (e.g., bg-qb-blue-10)
+- **Note:** `@source` to node_modules is required to tell tailwind to scan the library for class names
+
+<Source
+dark
+language="css"
+code={`
+   {/* index.css  */}
+   @import 'tailwindcss';
+   @import 'tailwindcss/utilities';
+
+   {/* ADD THIS AFTER YOUR TAILWIND IMPORT  */}
+   @import 'quickbill-ui/style.css';
+   @import 'quickbill-ui/preset-v4.css';
+
+   @source "../../node_modules/quickbill-ui";
+`}
+/>
+
+#### **For Tailwind v3**
+Add the following config to your `tailwind.config.js` file:
+<Source
+dark
+language="typescript"
+code={`
+   // tailwind.config.js
+   module.exports = {
+   // 1. Add the Quickbill v3 preset
+   presets: [
+      require('quickbill-ui/preset-v3')
+   ],
+
+   // 2. Scan your app AND the Quickbill UI library
+   content: [
+      './src/**/*.{js,ts,jsx,tsx}',
+      './node_modules/quickbill-ui/dist/**/*.{js,ts,jsx,tsx}',
+   ],
+
+   // 3. Your theme (it will be merged with the preset)
+   theme: {
+      extend: {
+         colors: {
+         'blue-90': '#BBBBB', // Example of your color
+         // ... rest of your tokens
+         }
+      },
+   },
+   plugins: [],
+   }
+`}
+/>
+In your main CSS file (e.g., src/index.css), add an import for the globals.css file.
+<Source
+dark
+language="css"
+code={`
+   /* src/index.css */
+
+   /* 1. Import Tailwind's layers */
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+   /* 2. Import your NEW v2 library variables */
+   @import 'quickbill-ui/globals.css';
+
+   /* ...rest of your CSS */
+`}
+/>
+
+#### 3. **Set Provider**
+Add UI Provider wherever you want to use Quickbill UI theme, if your whole app use our theme you can place this provider at top level of your root app
+<Source
+dark
+language="jsx"
+code={`
+   {/* e.g layout.tsx */}
+   import { QuickbillUI } 'quickbill-ui'
+
+   function App({ children }) {
+      return (
+         ...
+         <QuickbillUI>
+            {children}
+         </QuickbillUI>
+         ...
+      )
+   }
+`}
+/>
+</div>

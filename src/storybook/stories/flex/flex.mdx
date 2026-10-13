@@ -1,0 +1,20 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as FlexStories from './flex.stories.tsx';
+
+<Meta of={FlexStories} />
+
+# Flex
+
+A Flexbox-based layout primitive for controlling direction (row/column), alignment, gap, and wrapping
+
+***
+
+#
+### Example
+<Primary of={FlexStories}/>
+
+### Props
+<Controls of={FlexStories.DefaultRow} />
+
+<Stories of={FlexStories} />

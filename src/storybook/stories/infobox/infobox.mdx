@@ -1,0 +1,20 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as InfoBox from './infobox.stories.tsx';
+
+<Meta of={InfoBox} />
+
+# InfoBox
+
+The InfoBox is a visual container component used to quickly convey status messages, warnings, or contextual information to users. It combines a status icon, main text, and optional action elements (a Label or a Close Button) within a single colored pill to draw attention.
+
+***
+
+#
+### Example
+<Primary of={InfoBox}/>
+
+### Props
+<Controls of={InfoBox.Default} />
+
+<Stories of={InfoBox} />

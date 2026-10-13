@@ -1,0 +1,21 @@
+import { Canvas, Meta, Controls, Source, Stories, Markdown, Primary } from '@storybook/addon-docs/blocks';
+
+import * as SummaryStories from './summary.stories.tsx';
+
+<Meta of={SummaryStories} />
+
+# Avatar
+
+Component to display Key-Value side to side
+
+***
+
+#
+### Example
+<Primary of={SummaryStories} close={true} />
+
+
+### Props
+<Controls of={SummaryStories.Default} />
+
+<Stories of={SummaryStories} />

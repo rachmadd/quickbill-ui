@@ -24,7 +24,7 @@ const preview: Preview = {
     options: {
       storySort: {
         method: 'alphabetical',
-        order: ['Introduction', 'Core', 'Components', ['Fields', '*'], 'Pages'],
+        order: ['Quickbill UI', 'Introduction', 'Core', 'Components', ['Fields', '*'], 'Pages'],
       }
     },
     backgrounds: {
